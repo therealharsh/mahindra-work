@@ -1,0 +1,48 @@
+		<!-- RISE STUFF -->
+
+		<p><center><b><i><h1><span>Lorem ipsum</span> dolor sit amet.</h1></i></b></center></p>
+			<div class="riseInAction">
+				<p><center><!-- Text from DB --> <?php echo $topText ?>
+				</center></p>
+				<div id="riseImage1">
+
+    				<img src="<?php echo $riseImg1 ?>" width="1030" height="500" alt="test">
+    				<div id="riseText1"><a><!-- Text from DB --> <?php echo $boxHeader ?></a><br><br>
+    					<p><!-- Text from DB --> <?php echo $boxParaText ?>
+    						<div class="btn-group">
+								<button type="button" class="btn btn-default">
+									Read More
+								</button>
+							</div>
+    					</p>
+    				</div>
+				</div>
+
+				<div id="riseImage2"> -->
+
+    				<img src="<?php echo $riseImg2 ?>" width="600" height="440" alt="test">
+    				<div id="riseText2"><a><!-- Text from DB --> <?php echo $boxHeader ?></a><br><br>
+    					<p><!-- Text from DB --> <?php echo $boxParaText ?>
+    						<div class="btn-group">
+								<button type="button" class="btn btn-default">
+									Read More
+								</button>
+							</div>
+    					</p>
+    				</div>
+				</div>
+
+				<div id="riseImage3">
+
+    				<img src="<?php echo $riseImg3 ?>" width="780" height="400" alt="test">
+    				<div id="riseText3"><a><!-- Text from DB --> <?php echo $boxHeader ?></a><br><br>
+    					<p><!-- Text from DB --> <?php echo $boxParaText ?>
+    						<div class="btn-group">
+								<button type="button" class="btn btn-default">
+									Read More
+								</button>
+							</div>
+    					</p>
+    				</div>
+				</div>
+			</div>	

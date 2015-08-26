@@ -1,0 +1,131 @@
+<section id="slider"><!--CAROUSEL-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+							<li data-target="#slider-carousel" data-slide-to="3"></li>
+						</ol>
+						<!-- PHP for Carousel -->
+						<!-- images -->
+						<?php
+							$con=mysql_connect("localhost","root") or die(mysql_error());
+							mysql_select_db("Harsh");
+							$sql1 = "select url from images where id=1";
+							$sql2 = "select url from images where id=2";
+							$sql3 = "select url from images where id=3";
+							$sql4 = "select url from images where id=4";
+							$eq1=mysql_query($sql1,$con);
+							$eq2=mysql_query($sql2,$con);
+							$eq3=mysql_query($sql3,$con);
+							$eq4=mysql_query($sql4,$con);
+							$row1 = mysql_fetch_assoc($eq1);
+							$row2 = mysql_fetch_assoc($eq2);
+							$row3 = mysql_fetch_assoc($eq3);
+							$row4 = mysql_fetch_assoc($eq4);
+							$img1 = $row1['url'];
+							$img2 = $row2['url'];
+							$img3 = $row3['url'];
+							$img4 = $row4['url'];
+						?>
+						<!-- text -->
+						<?php
+							$con=mysql_connect("localhost","root") or die(mysql_error());
+							mysql_select_db("Harsh");
+							$sql1 = "select header from carousel_text where id=0";
+							$sql2 = "select para from carousel_text where id=0";
+							$sql3 = "select text from carousel_foot where id=1";
+							$eq1=mysql_query($sql1,$con);
+							$eq2=mysql_query($sql2,$con);
+							$eq3=mysql_query($sql3,$con);
+							$row1 = mysql_fetch_assoc($eq1);
+							$row2 = mysql_fetch_assoc($eq2);
+							$row3 = mysql_fetch_assoc($eq3);
+							$headerText = $row1['header'];
+							$paraText = $row2['para'];
+							$carouselFoot = $row3['text'];
+						?>
+						<!-- END PHP -->
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div id="carouselImage1">
+
+    								<img src="<?php echo $img1 ?>" width="980" height="700" alt="test1">
+    									<div id="carouselText"><a> <!-- Header from DB --> <?php echo $headerText ?></a><br><br>
+    										<p><!-- Text from DB --> <?php echo $paraText ?>
+    											<div class="btn-group">
+													<button type="button" class="btn btn-default">
+													Read More
+													</button>
+												</div>
+    										</p>
+    									</div>
+								</div>
+							</div>
+							<div class="item ">
+								<div id="carouselImage2">
+    								<img src="<?php echo $img2 ?>" width="980" height="700" alt="test">
+    									<div id="carouselText"><a> <!-- Header from DB --> <?php echo $headerText ?></a><br><br>
+    										<p><!-- Text from DB --> <?php echo $paraText ?>
+    											<div class="btn-group">
+													<button type="button" class="btn btn-default">
+														Read More
+													</button>
+												</div>
+    										</p>
+    									</div>
+								</div>
+							</div>
+							
+							<div class="item ">
+								<div id="carouselImage3">
+    								<img src="<?php echo $img3 ?>" width="980" height="700" alt="test">
+    									<div id="carouselText"><a><!-- Header from DB --> <?php echo $headerText ?></a><br><br>
+    										<p><!-- Text from DB --> <?php echo $paraText ?>
+    											<div class="btn-group">
+													<button type="button" class="btn btn-default">
+														Read More
+													</button>
+												</div>
+    										</p>
+    									</div>
+								</div>
+							</div>
+
+							<div class="item ">
+								<div id="carouselImage4">
+									<img src="<?php echo $img4 ?>" width="980" height="700" alt="test">
+    									<div id="carouselText"><a><!-- Header from DB --> <?php echo $headerText ?></a><br><br>
+    										<p><!-- Text from DB --> <?php echo $paraText ?>
+    											<div class="btn-group">
+													<button type="button" class="btn btn-default">
+														Read More
+													</button>
+												</div>
+    										</p>
+    									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="carousel-foot"> <center><h1><span>Lorem ipsum</span> dolor sit amet.</h1></center>
+		<p><center>
+			<!-- Text from DB --> <?php echo $carouselFoot ?>
+		</center></p></div>
+	</section><!--/CAROUSEL-->
