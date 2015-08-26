@@ -1,6 +1,6 @@
 # mahindra-work
 
-Mahindra RISE Project
+Mahindra RISE Project (HTML, CSS, PHP, MySQL, JavaScript, JQuery)
 
 UPDATES as of August 27, 2015
 
